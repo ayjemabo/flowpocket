@@ -1,0 +1,160 @@
+/* ---------- Root Theme ---------- */
+:root {
+  --blue: #3579ff;
+  --blue-dark: #265de0;
+  --green: #3ddc97;
+  --bg-light: #f4f6fb;
+  --bg-white: #ffffff;
+  --text-dark: #1b1f32;
+  --text-light: #70789a;
+  --radius: 14px;
+  --shadow: 0 6px 18px rgba(0,0,0,0.08);
+  --glass: rgba(255,255,255,0.6);
+}
+
+/* ---------- General ---------- */
+body {
+  margin: 0;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e8edff, #f8faff);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Header ---------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(12px);
+  background: var(--glass);
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  box-shadow: var(--shadow);
+  padding: 18px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--blue-dark);
+  letter-spacing: -0.02em;
+}
+
+nav a {
+  margin-left: 18px;
+  color: var(--blue-dark);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  transition: all 0.25s ease;
+}
+nav a:hover {
+  background: rgba(53,121,255,0.12);
+  color: var(--blue);
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  text-align: center;
+  padding: 120px 20px 100px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--blue-dark);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.hero .btn {
+  background: var(--blue);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow);
+}
+.hero .btn:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+}
+
+/* ---------- Features ---------- */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  background: var(--bg-white);
+  padding: 80px 20px;
+}
+
+.feature {
+  background: var(--bg-light);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+  width: 280px;
+  transition: transform .25s ease, box-shadow .25s ease;
+  text-align: center;
+}
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+}
+.feature h2 {
+  color: var(--blue-dark);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.feature p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ---------- About Section ---------- */
+.about {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(120deg, #f1f4ff, #eef6ff);
+}
+.about h2 {
+  color: var(--blue-dark);
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 24px;
+  background: var(--bg-white);
+  border-top: 1px solid #e2e6f0;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowpocket | Daily Budget Manager</title>
+  <link rel="stylesheet" href="visualizer.css">
+</head>
+<body>
+  <header>
+    <h1>Flowpocket Dashboard</h1>
+    <nav>
+      <a href="index.html">index.html</a>
+      <button id="viewHistoryBtn">View Past Days</button>
+      <button id="updateBudgetBtn">Update Budget</button>
+      <button id="resetBtn" class="danger">Reset All</button>
+    </nav>
+  </header>
+
+  <!-- Progress bar -->
+  <section class="progress-wrap">
+    <div class="progress-info">
+      <span id="progressLabel">0% of budget used</span>
+      <span id="progressNumbers">0 / 0 USD</span>
+    </div>
+    <div class="progress">
+      <div id="progressBar"></div>
+    </div>
+  </section>
+
+  <section class="summary">
+    <div class="card"><h2>Budget</h2><p id="budget">—</p></div>
+    <div class="card"><h2>Spent</h2><p id="spent">0 USD</p></div>
+    <div class="card"><h2>Remaining</h2><p id="remaining">—</p></div>
+    <div class="card"><h2>Set On</h2><p id="setTime">—</p></div>
+    <div class="card"><h2>Today</h2><p id="todayDate">—</p></div>
+  </section>
+
+  <section class="input-area">
+    <div id="budgetPrompt" class="prompt">
+      <h2>Set Your Daily Budget</h2>
+      <input type="number" id="budgetInput" placeholder="Enter amount (USD)">
+      <button id="setBudgetBtn">Save Budget</button>
+    </div>
+
+    <div id="expenseForm" class="hidden">
+      <input type="text" id="category" placeholder="Category (e.g. Food)">
+      <input type="number" id="amount" placeholder="Amount (USD)">
+      <button id="addBtn">Add Expense</button>
+    </div>
+  </section>
+
+  <section class="data-list">
+    <h2>Your Expenses (Today)</h2>
+    <div id="entries"></div>
+  </section>
+
+  <!-- History drawer -->
+  <aside id="historyPanel" class="history hidden">
+    <div class="history-head">
+      <h2>Past Days</h2>
+      <button id="closeHistory">Close</button>
+    </div>
+    <div id="historyList" class="history-list"></div>
+    <div id="historyDetail" class="history-detail hidden"></div>
+  </aside>
+
+  <footer>
+    <p>© 2025 Flowpocket by Albaraa Alharbi</p>
+  </footer>
+
+  <script src="visualizer.js"></script>
+</body>
+</html>
